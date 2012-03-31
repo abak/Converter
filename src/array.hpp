@@ -6,7 +6,9 @@
 
 namespace ail
 {
- 
+  typedef signed short int sint16;
+  typedef signed short int int16;
+  typedef unsigned char uint8;
   
 
   template<typename T>
@@ -28,6 +30,7 @@ namespace ail
     Array2D(void)
     {
     };
+    
     Array2D(const size_t i_width, const size_t i_height) :
     width(i_width),
     height(i_height),
@@ -87,9 +90,9 @@ namespace ail
     
     Array2D(const Array2D& a) :
     width(a.width),
-    height(a.height),
-    data(a.data)
+    height(a.height)
     {
+      data = a.data;
       ptr.resize(height);
       Link();
     }
