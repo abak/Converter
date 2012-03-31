@@ -15,5 +15,7 @@ int main (int argc, char* argv[])
    
   assert( (array.getSize() == std::make_pair<size_t, size_t>(124, 124)) );
 
+  assert(array[24][20] == 7);
+  
   return 0;
 }
