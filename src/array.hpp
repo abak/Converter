@@ -51,6 +51,11 @@ namespace ail
       return height;
     }
     
+    size_t getRowByteSize()
+    {
+      return width * sizeof(T); 
+    }
+    
     std::pair<size_t, size_t> getSize(void)
     {
       return std::make_pair(width, height);

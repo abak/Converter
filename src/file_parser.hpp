@@ -44,7 +44,6 @@ namespace ail
       std::vector<PixelType> result;
       std::string remaining;
       
-      
       size_t pos = line.find("\t");
       std::string value = line.substr(0, pos);
       remaining = line.substr(pos + 1, line.length());//+1 to pop the \t
@@ -62,7 +61,6 @@ namespace ail
         remaining = remaining.substr(pos + 1, remaining.length());
         result.push_back(atof(value.c_str()));
       }
-      
       
       return result;
     }
